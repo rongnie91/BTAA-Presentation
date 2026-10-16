@@ -1,0 +1,175 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>BTAA — Early Childhood Repertoire Selection</title>
+<style>
+  :root{
+    --green:#18453b; --green2:#0e2a23; --gold:#b5852a; --clay:#a9542f;
+    --paper:#f4efe3; --card:#fbf8f0; --ink:#262219; --muted:#716b5b; --line:#ddd4c0;
+    --serif:Georgia,"Times New Roman",serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{background:var(--paper);color:var(--ink);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    -webkit-font-smoothing:antialiased;padding:20px 16px 48px;line-height:1.5}
+  .wrap{max-width:540px;margin:0 auto}
+
+  /* editorial content sheet */
+  .sheet{background:var(--card);border:1px solid var(--line);border-radius:7px;
+    padding:28px 24px 30px;margin:0 0 15px;min-height:30vh;display:flex;flex-direction:column;justify-content:center;
+    box-shadow:0 1px 0 #ffffff inset}
+  .meta{display:flex;justify-content:space-between;align-items:baseline;
+    border-bottom:1px solid var(--line);padding-bottom:8px;margin-bottom:16px}
+  .meta .lab{font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;font-weight:700;color:var(--gold)}
+  .meta .no{font-family:var(--serif);font-size:22px;color:var(--green);font-style:italic}
+  h2{font-family:var(--serif);font-weight:700;font-size:25px;line-height:1.18;color:var(--green);letter-spacing:.1px}
+  h2 .u{color:var(--clay)}
+  p{font-size:16.5px;color:var(--ink)}
+  p+p{margin-top:10px}
+  .muted{color:var(--muted)}
+  .small{font-size:14.5px}
+  .rqs{font-family:var(--serif);font-size:20px;line-height:1.35;color:var(--ink);margin:4px 0}
+  .rqs b{color:var(--green)}
+  .num{font-family:var(--serif);font-style:italic;color:var(--gold);margin-right:6px}
+
+  /* chips */
+  .chips{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}
+  .chip{font-size:13.5px;font-weight:600;color:var(--green);background:#eef1e9;border:1px solid #d8e0d2;
+    border-radius:6px;padding:6px 12px}
+  .chip.warm{color:#7a4a22;background:#f4ebdc;border-color:#e6d6bb}
+
+  /* mini framed rows (pattern 3) */
+  .row{display:flex;gap:12px;align-items:flex-start;padding:12px 0;border-top:1px solid var(--line)}
+  .row:first-of-type{border-top:none}
+  .row .ic{flex:0 0 26px;margin-top:2px}
+  .row b{color:var(--green)}
+
+  /* hero */
+  .hero{background:var(--green);border:none;color:#f3ecd9;text-align:center;align-items:center;border-radius:7px;
+    padding:30px 24px 34px;margin:0 0 15px}
+  .hero .kick{font-size:11.5px;letter-spacing:.22em;text-transform:uppercase;color:#bcd3c8;font-weight:700}
+  .disp{background:var(--card);border-radius:12px;padding:14px 10px 8px;display:inline-block;margin:18px auto 4px}
+  .hero .epi{font-family:var(--serif);font-style:italic;font-size:20px;color:#e3ddc9;margin:18px 0 10px;letter-spacing:.2px}
+  .hero h1{font-family:var(--serif);font-weight:700;font-size:22px;line-height:1.25;color:#cfe3d8;margin:0 0 4px;letter-spacing:.2px}
+  .hero .sub{color:#cfe3d8;font-size:16px}
+  .hero .by{color:#9fbcb0;font-size:13.5px;margin-top:16px;letter-spacing:.02em}
+  .cap{color:#9fbcb0;font-size:12.5px;letter-spacing:.03em;margin-top:8px}
+
+  /* closing */
+  .end{background:var(--green);color:#f3ecd9;border:none;text-align:center;border-radius:7px;padding:30px 24px 32px}
+  .end .lab{font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;font-weight:700;color:var(--gold)}
+  .end h2{color:#fdfaf2;margin:10px 0}
+  .end p{color:#cfe3d8}
+  .ref{font-size:11px;line-height:1.3;color:#4f4a3d;padding-left:14px;text-indent:-14px;margin:5px 0}
+  footer{text-align:center;color:var(--muted);font-size:12.5px;margin-top:6px}
+</style>
+
+<div class="wrap">
+
+  <!-- TITLE -->
+  <section class="hero">
+    <div class="kick">Michigan State University · BTAA</div>
+    <div class="disp">
+      <svg width="132" height="150" viewBox="0 0 150 168" aria-label="slot machine">
+        <line x1="131" y1="70" x2="131" y2="38" stroke="#18453b" stroke-width="5" stroke-linecap="round"/>
+        <circle cx="131" cy="33" r="9" fill="#b5852a"/>
+        <rect x="16" y="14" width="112" height="140" rx="16" fill="#18453b"/>
+        <rect x="28" y="24" width="88" height="22" rx="7" fill="#0e2a23"/>
+        <circle cx="42" cy="35" r="3.5" fill="#b5852a"/><circle cx="72" cy="35" r="3.5" fill="#cfe3d8"/><circle cx="102" cy="35" r="3.5" fill="#b5852a"/>
+        <rect x="28" y="54" width="88" height="48" rx="8" fill="#fbf8f0"/>
+        <rect x="33" y="60" width="24" height="36" rx="5" fill="#eef1e9"/>
+        <rect x="61" y="60" width="24" height="36" rx="5" fill="#eef1e9"/>
+        <rect x="89" y="60" width="24" height="36" rx="5" fill="#eef1e9"/>
+        <g fill="#18453b"><ellipse cx="41" cy="86" rx="5" ry="3.6" transform="rotate(-20 41 86)"/><rect x="44.6" y="67" width="2.4" height="19" rx="1"/></g>
+        <g fill="#b5852a"><ellipse cx="67" cy="87" rx="4.1" ry="3" transform="rotate(-20 67 87)"/><ellipse cx="79" cy="87" rx="4.1" ry="3" transform="rotate(-20 79 87)"/><rect x="69.3" y="69" width="2.1" height="18"/><rect x="81.3" y="69" width="2.1" height="18"/><rect x="69.3" y="69" width="14.1" height="3.3"/></g>
+        <g fill="none" stroke="#18453b" stroke-width="2"><circle cx="101" cy="80" r="9.3"/><ellipse cx="101" cy="80" rx="4" ry="9.3"/><line x1="91.8" y1="80" x2="110.2" y2="80"/></g>
+        <rect x="40" y="112" width="64" height="28" rx="7" fill="#0e2a23"/>
+        <rect x="52" y="124" width="40" height="8" rx="4" fill="#18453b"/>
+      </svg>
+    </div>
+    <p class="epi">“My Slot Machine Has Ten Rings”</p>
+    <h1>How Early Childhood Music Teachers<br>Choose Repertoire</h1>
+    <p class="by">Rong Nie · Music Education PhD Student</p>
+    <p class="by" style="margin-top:6px;opacity:.75">scroll ↓</p>
+  </section>
+
+  <!-- RESEARCH QUESTIONS -->
+  <section class="sheet">
+    <div class="meta"><span class="lab">Research questions</span><span class="no">—</span></div>
+    <p class="rqs"><span class="num">RQ1</span> How do early childhood music teachers describe their <b>reasoning and decision-making</b> when selecting repertoire?</p>
+    <p class="rqs" style="margin-top:12px"><span class="num">RQ2</span> What <b>factors shape</b> their repertoire selection decisions?</p>
+  </section>
+
+  <!-- METHOD -->
+  <section class="sheet">
+    <div class="meta"><span class="lab">Method · ongoing</span><span class="no">—</span></div>
+    <h2>Ten early childhood music teachers</h2>
+    <p class="muted small" style="margin-top:8px">Pedagogical backgrounds represented:</p>
+    <div class="chips" style="margin-top:10px">
+      <span class="chip">Music Learning Theory</span><span class="chip">Kodály</span><span class="chip">Orff</span>
+    </div>
+    <div class="chips">
+      <span class="chip warm">Public schools</span><span class="chip warm">Preschools</span><span class="chip warm">Community programs</span>
+    </div>
+  </section>
+
+  <!-- PATTERN 1 -->
+  <section class="sheet">
+    <div class="meta"><span class="lab">Pattern</span><span class="no">01</span></div>
+    <h2>Two timescales</h2>
+    <p class="rqs" style="margin-top:10px;font-size:19px">A planned “menu” &nbsp;→&nbsp; a <b>live</b> choice</p>
+  </section>
+
+  <!-- PATTERN 2 -->
+  <section class="sheet">
+    <div class="meta"><span class="lab">Pattern</span><span class="no">02</span></div>
+    <h2>What is “variety”?</h2>
+    <div class="chips" style="margin-top:14px">
+      <span class="chip">tonality</span><span class="chip">meter</span><span class="chip">structure</span>
+      <span class="chip warm">genre</span><span class="chip warm">language</span><span class="chip warm">culture</span><span class="chip warm">time period</span>
+    </div>
+    <p class="small" style="margin-top:16px;color:var(--clay)">Connected to their training?</p>
+  </section>
+
+  <!-- PATTERN 3 -->
+  <section class="sheet">
+    <div class="meta"><span class="lab">Pattern</span><span class="no">03</span></div>
+    <h2>Repertoire built over time</h2>
+    <div style="margin-top:12px">
+      <div class="row">
+        <svg class="ic" viewBox="0 0 26 26"><rect x="3" y="15" width="6" height="8" rx="1.5" fill="#cfe0d0"/><rect x="10" y="10" width="6" height="13" rx="1.5" fill="#5fae8c"/><rect x="17" y="4" width="6" height="19" rx="1.5" fill="#18453b"/></svg>
+        <p class="rqs" style="font-size:18px"><b>Built through training &amp; experience</b></p>
+      </div>
+      <div class="row">
+        <svg class="ic" viewBox="0 0 26 26"><circle cx="11" cy="11" r="8" fill="none" stroke="#a9542f" stroke-width="2.4"/><line x1="17" y1="17" x2="23" y2="23" stroke="#a9542f" stroke-width="2.6" stroke-linecap="round"/></svg>
+        <p class="rqs" style="font-size:18px"><b>Aware of the gaps</b></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CLOSING -->
+  <section class="end">
+    <div class="lab">Still coding</div>
+    <h2>How do these patterns connect?</h2>
+    <p class="small" style="margin-top:10px">Not picking from a list — <b style="color:#fff">professional reasoning.</b></p>
+  </section>
+
+  <!-- REFERENCES & CONTACT -->
+  <section class="sheet">
+    <div class="meta"><span class="lab">Contact</span><span class="no">—</span></div>
+    <div style="display:flex;gap:18px;align-items:center;margin-bottom:6px">
+      <div style="flex:0 0 auto;text-align:center">
+        <div style="background:#fff;border:1px solid var(--line);border-radius:8px;padding:7px;display:inline-block"><svg viewBox="0 0 116 116" width="118" height="118" shape-rendering="crispEdges" xmlns="http://www.w3.org/2000/svg"><rect width="116" height="116" fill="#ffffff"/><g fill="#18453b"><rect x="8" y="8" width="28" height="4"/><rect x="52" y="8" width="4" height="4"/><rect x="68" y="8" width="4" height="4"/><rect x="80" y="8" width="28" height="4"/><rect x="8" y="12" width="4" height="4"/><rect x="32" y="12" width="4" height="4"/><rect x="40" y="12" width="4" height="4"/><rect x="48" y="12" width="12" height="4"/><rect x="68" y="12" width="8" height="4"/><rect x="80" y="12" width="4" height="4"/><rect x="104" y="12" width="4" height="4"/><rect x="8" y="16" width="4" height="4"/><rect x="16" y="16" width="12" height="4"/><rect x="32" y="16" width="4" height="4"/><rect x="44" y="16" width="4" height="4"/><rect x="52" y="16" width="8" height="4"/><rect x="80" y="16" width="4" height="4"/><rect x="88" y="16" width="12" height="4"/><rect x="104" y="16" width="4" height="4"/><rect x="8" y="20" width="4" height="4"/><rect x="16" y="20" width="12" height="4"/><rect x="32" y="20" width="4" height="4"/><rect x="44" y="20" width="8" height="4"/><rect x="64" y="20" width="4" height="4"/><rect x="80" y="20" width="4" height="4"/><rect x="88" y="20" width="12" height="4"/><rect x="104" y="20" width="4" height="4"/><rect x="8" y="24" width="4" height="4"/><rect x="16" y="24" width="12" height="4"/><rect x="32" y="24" width="4" height="4"/><rect x="40" y="24" width="4" height="4"/><rect x="48" y="24" width="12" height="4"/><rect x="68" y="24" width="4" height="4"/><rect x="80" y="24" width="4" height="4"/><rect x="88" y="24" width="12" height="4"/><rect x="104" y="24" width="4" height="4"/><rect x="8" y="28" width="4" height="4"/><rect x="32" y="28" width="4" height="4"/><rect x="48" y="28" width="4" height="4"/><rect x="60" y="28" width="12" height="4"/><rect x="80" y="28" width="4" height="4"/><rect x="104" y="28" width="4" height="4"/><rect x="8" y="32" width="28" height="4"/><rect x="40" y="32" width="4" height="4"/><rect x="48" y="32" width="4" height="4"/><rect x="56" y="32" width="4" height="4"/><rect x="64" y="32" width="4" height="4"/><rect x="72" y="32" width="4" height="4"/><rect x="80" y="32" width="28" height="4"/><rect x="44" y="36" width="28" height="4"/><rect x="8" y="40" width="4" height="4"/><rect x="16" y="40" width="4" height="4"/><rect x="24" y="40" width="4" height="4"/><rect x="32" y="40" width="4" height="4"/><rect x="52" y="40" width="4" height="4"/><rect x="60" y="40" width="8" height="4"/><rect x="72" y="40" width="4" height="4"/><rect x="88" y="40" width="4" height="4"/><rect x="100" y="40" width="4" height="4"/><rect x="12" y="44" width="4" height="4"/><rect x="28" y="44" width="4" height="4"/><rect x="36" y="44" width="8" height="4"/><rect x="68" y="44" width="16" height="4"/><rect x="92" y="44" width="16" height="4"/><rect x="12" y="48" width="4" height="4"/><rect x="20" y="48" width="16" height="4"/><rect x="48" y="48" width="4" height="4"/><rect x="56" y="48" width="8" height="4"/><rect x="76" y="48" width="32" height="4"/><rect x="16" y="52" width="16" height="4"/><rect x="36" y="52" width="8" height="4"/><rect x="52" y="52" width="12" height="4"/><rect x="68" y="52" width="4" height="4"/><rect x="84" y="52" width="8" height="4"/><rect x="8" y="56" width="8" height="4"/><rect x="32" y="56" width="8" height="4"/><rect x="44" y="56" width="8" height="4"/><rect x="56" y="56" width="8" height="4"/><rect x="76" y="56" width="8" height="4"/><rect x="104" y="56" width="4" height="4"/><rect x="12" y="60" width="4" height="4"/><rect x="24" y="60" width="8" height="4"/><rect x="40" y="60" width="4" height="4"/><rect x="52" y="60" width="12" height="4"/><rect x="80" y="60" width="4" height="4"/><rect x="96" y="60" width="12" height="4"/><rect x="8" y="64" width="4" height="4"/><rect x="24" y="64" width="4" height="4"/><rect x="32" y="64" width="4" height="4"/><rect x="40" y="64" width="8" height="4"/><rect x="52" y="64" width="8" height="4"/><rect x="80" y="64" width="4" height="4"/><rect x="96" y="64" width="12" height="4"/><rect x="12" y="68" width="20" height="4"/><rect x="40" y="68" width="4" height="4"/><rect x="56" y="68" width="12" height="4"/><rect x="72" y="68" width="12" height="4"/><rect x="88" y="68" width="4" height="4"/><rect x="8" y="72" width="4" height="4"/><rect x="20" y="72" width="4" height="4"/><rect x="32" y="72" width="4" height="4"/><rect x="44" y="72" width="12" height="4"/><rect x="60" y="72" width="4" height="4"/><rect x="72" y="72" width="24" height="4"/><rect x="100" y="72" width="4" height="4"/><rect x="40" y="76" width="4" height="4"/><rect x="48" y="76" width="8" height="4"/><rect x="60" y="76" width="4" height="4"/><rect x="68" y="76" width="8" height="4"/><rect x="88" y="76" width="4" height="4"/><rect x="100" y="76" width="8" height="4"/><rect x="8" y="80" width="28" height="4"/><rect x="44" y="80" width="8" height="4"/><rect x="68" y="80" width="8" height="4"/><rect x="80" y="80" width="4" height="4"/><rect x="88" y="80" width="4" height="4"/><rect x="96" y="80" width="12" height="4"/><rect x="8" y="84" width="4" height="4"/><rect x="32" y="84" width="4" height="4"/><rect x="44" y="84" width="12" height="4"/><rect x="60" y="84" width="4" height="4"/><rect x="72" y="84" width="4" height="4"/><rect x="88" y="84" width="4" height="4"/><rect x="104" y="84" width="4" height="4"/><rect x="8" y="88" width="4" height="4"/><rect x="16" y="88" width="12" height="4"/><rect x="32" y="88" width="4" height="4"/><rect x="40" y="88" width="4" height="4"/><rect x="48" y="88" width="4" height="4"/><rect x="56" y="88" width="8" height="4"/><rect x="72" y="88" width="20" height="4"/><rect x="100" y="88" width="8" height="4"/><rect x="8" y="92" width="4" height="4"/><rect x="16" y="92" width="12" height="4"/><rect x="32" y="92" width="4" height="4"/><rect x="44" y="92" width="32" height="4"/><rect x="84" y="92" width="8" height="4"/><rect x="96" y="92" width="4" height="4"/><rect x="8" y="96" width="4" height="4"/><rect x="16" y="96" width="12" height="4"/><rect x="32" y="96" width="4" height="4"/><rect x="40" y="96" width="20" height="4"/><rect x="68" y="96" width="4" height="4"/><rect x="84" y="96" width="12" height="4"/><rect x="104" y="96" width="4" height="4"/><rect x="8" y="100" width="4" height="4"/><rect x="32" y="100" width="4" height="4"/><rect x="44" y="100" width="8" height="4"/><rect x="56" y="100" width="20" height="4"/><rect x="80" y="100" width="16" height="4"/><rect x="100" y="100" width="4" height="4"/><rect x="8" y="104" width="28" height="4"/><rect x="40" y="104" width="4" height="4"/><rect x="48" y="104" width="12" height="4"/><rect x="64" y="104" width="16" height="4"/><rect x="92" y="104" width="4" height="4"/><rect x="100" y="104" width="8" height="4"/></g></svg></div>
+        <div style="font-size:11.5px;color:var(--muted);margin-top:5px">Scan to connect</div>
+      </div>
+      <div style="flex:1">
+        <p style="font-family:var(--serif);font-size:19px;color:var(--green);line-height:1.2">Rong Nie</p>
+        <p class="muted small" style="margin-top:4px">Michigan State University</p>
+        <p class="muted small">nierong1@msu.edu</p>
+      </div>
+    </div>
+    </section>
+
+  <footer>Research in progress · nierong1@msu.edu</footer>
+
+</div>
